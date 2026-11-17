@@ -60,6 +60,7 @@ Movie-Recommendation-System/
 │   └── ml-latest-small/
 │
 ├── explore_data.py
+├── inspect_movies.py
 ├── create_matrix.py
 ├── recommend_movies.py
 ├── personalized_recommendations.py
@@ -67,23 +68,22 @@ Movie-Recommendation-System/
 ├── cold_start_recommendations.py
 ├── evaluate_model.py
 ├── compare_models.py
-├── inspect_movies.py
 └── .gitignore
 ```
 
 ## 🤖 Machine Learning Approach
 
-The project explores two collaborative filtering approaches:
+The project explores the following recommendation techniques:
 
-**1. Item-Based Collaborative Filtering**
+### 1. Item-Based Collaborative Filtering
 
 Recommends movies based on similarities between movies rated by users.
 
-**2. User-Based Collaborative Filtering**
+### 2. User-Based Collaborative Filtering
 
 Finds users with similar rating patterns and recommends movies they may like.
 
-**3. Cold-Start Handling**
+### 3. Cold-Start Handling
 
 Provides fallback recommendations when sufficient user rating history is not available.
 
@@ -91,33 +91,42 @@ Provides fallback recommendations when sufficient user rating history is not ava
 
 This project uses the MovieLens Latest Small dataset.
 
-- 9,742 movies
-- 100,836 ratings
-- 610 users
+- **Movies:** 9,742
+- **Ratings:** 100,836
+- **Users:** 610
 
 Dataset folder: `dataset/ml-latest-small/`
 
 ## 🚀 Running the Project
 
-### Backend
+### Prerequisites
+
+- Python
+- Node.js and npm
+- PostgreSQL
+- Git
+
+### 1. Backend Setup
+
+Open a terminal in the project root directory.
 
 Navigate to the backend folder:
 
-```bash
+```cmd
 cd backend
 ```
 
-Activate the project's Python virtual environment:
+Activate the Python virtual environment:
 
-```bash
+```cmd
 ..\.venv\Scripts\activate
 ```
 
-Configure the PostgreSQL database connection using your local `.env` file.
+Make sure PostgreSQL is running and configure your database connection in the local `.env` file in the project root.
 
 Start the FastAPI server:
 
-```bash
+```cmd
 python -m uvicorn app.main:app --reload --port 8000
 ```
 
@@ -125,24 +134,37 @@ Open the API documentation:
 
 http://127.0.0.1:8000/docs
 
-### Frontend
+### 2. Frontend Setup
 
-Open another terminal:
+Open a **new terminal** in the project root directory.
 
-```bash
+Navigate to the frontend folder:
+
+```cmd
 cd frontend
+```
+
+Install the frontend dependencies:
+
+```cmd
 npm install
+```
+
+Start the React development server:
+
+```cmd
 npm run dev
 ```
 
-Open the local URL displayed by Vite in your browser.
+Open the local URL displayed in the terminal by Vite.
 
-## 🔗 Repository
+## 🔗 GitHub Repository
 
-[Movie Recommendation System – GitHub](https://github.com/deekshitha2206-hue/Movie-Recommendation-System)
+[Movie Recommendation System](https://github.com/deekshitha2206-hue/Movie-Recommendation-System)
 
 ## 👩‍💻 Author
 
 **Deekshitha Bikkumalla**
 
 GitHub: [@deekshitha2206-hue](https://github.com/deekshitha2206-hue)
+
